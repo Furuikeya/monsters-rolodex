@@ -7,7 +7,9 @@ export type Monster = {
   id: string;
   name: string;
   email: string;
-  address: object;
+  address: {
+    city: string;
+  };
 }
 
 const App = () => {

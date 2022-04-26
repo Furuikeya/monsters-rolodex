@@ -8,14 +8,15 @@ type CardProps = {
 
 
 export const Card = ({ monster }: CardProps) => {
- 
+  const {id, name, address, email} = monster;
   return (
   <div className="card-container">
     <img
-      src={`https://robohash.org/${monster.id}?set=set2&size=180x180`}
+      src={`https://robohash.org/${id}?set=set2&size=180x180`}
       alt="monster"
     />
-    <h2> {monster.name} </h2>
-    <p>{monster.email}</p>
+    <h2> {name} </h2>
+    <h4>{address.city}</h4>
+    <p>{email}</p>
   </div>
 )};
